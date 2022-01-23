@@ -14,5 +14,4 @@ First you need to have `discord.py` installed, you can do this with  `pip instal
  - `&debug` Currently the only supported command, you can use this to know how many messages the bot has deleted.
 
 **To-do**
-Make the command prefix modifiable 
-
+~~Make the command prefix modifiable~~

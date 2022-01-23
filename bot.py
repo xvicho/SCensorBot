@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+PREFIX = os.getenv('PREFIX')
 
 client = discord.Client()
 
@@ -32,7 +33,7 @@ async def on_message(message):
     if any(word in msg_content for word in banwords):
         await message.delete()
         count += 1
-    if message.content.startswith('&debug'):
+    if message.content.startswith(PREFIX + 'debug'):
         await message.channel.send('I deleted a total of: ' + str(count) + ' messages.')
 
 client.run(TOKEN)
